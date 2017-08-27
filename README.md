@@ -1,6 +1,8 @@
 #关于rsa 签名 使用 cgo (openssl) 和golang 原生库 对比
 
 #运行
+go get github.com/Bulesxz/rsa_cgo
+
 go test -bench="."
 
 #测试环境:
