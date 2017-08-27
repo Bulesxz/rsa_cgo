@@ -1,11 +1,11 @@
-#关于rsa 签名 使用 cgo (openssl) 和golang 原生库 对比
+# 关于rsa 签名 使用 cgo (openssl) 和golang 原生库 对比
 
-#运行
+# 运行
 go get github.com/Bulesxz/rsa_cgo
 
 go test -bench="."
 
-#测试环境:
+# 测试环境:
 ```
 硬件概览：
   型号名称：	MacBook Pro
@@ -25,13 +25,13 @@ openssl: OpenSSL 1.1.0f  25 May 2017
 golang: go version go1.8.3 darwin/amd64
 
 ```
-#经过测试 发现cgo openssl 的性能是 golang 的 5倍左右 ，5倍！！！！！
+# 经过测试 发现cgo openssl 的性能是 golang 的 5倍左右 ，5倍！！！！！
 ```
 BenchmarkGoRsa-4            2000            670399 ns/op
 BenchmarkCgoRsa-4          10000            122419 ns/op
 ```
 
-#场景应用
+# 场景应用
 使用golang rsa 签名的 高并发 程序，比如聚合支付相关（支付宝API)
 
 # 注意
